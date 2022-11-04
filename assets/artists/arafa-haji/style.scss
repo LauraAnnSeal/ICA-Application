@@ -1,0 +1,229 @@
+body{
+  margin: 0!important;
+  padding: 0!important;
+}
+
+#overlay{
+    background: url('assets/background.jpg') center center no-repeat;
+    background-size: cover;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 120px 20px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .row{
+        min-height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        color: white;
+        p{
+          font-size: 1em;
+        }
+    }
+}
+
+.three-js-container{
+  z-index: 100;
+}
+canvas{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#c-1{
+  background: url('assets/opening.gif') center center no-repeat;
+  background-size: cover;
+}
+#c-3{
+  background: red;
+}
+
+.opening{
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  width: 300px;
+  height: auto;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #0CFFE3;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #0CFFE3;
+  padding: 10px;
+  .btn-primary{
+    border-radius: 0;
+    background: #0CFFE3;
+    color: black;
+  }
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/opening.gif') center center no-repeat;
+    background-size: cover;
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 4s ease;
+    z-index: 2000;
+  }
+  #loading .progress {
+    margin: 1.5em;
+    border: 1px solid white;
+    width: 50vw;
+    background: black;
+  }
+  #loading .progressbar {
+    margin: 2px;
+    background: white;
+    height: 1em;
+    transform-origin: top left;
+    width: 0%;
+  }
+
+  .popup-window{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    .video{
+      width: 60vw;
+      height: 60vh;
+      padding:56.25% 0 0 0;
+      position:relative;
+      iframe{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .button{
+      position: fixed;
+      width: 100vw;
+      bottom: 20px;
+      left: 0;
+      text-align: center;
+    }
+  }
+
+  .back-btn{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    z-index: 1000;
+    .btn-primary{
+      border-radius: 0;
+      background: #0CFFE3;
+      color: black;
+    }
+  }
+
+  .mobile{
+    font-family: 'JetBrains Mono', monospace;
+    background: url('assets/opening.gif') center center no-repeat;
+    background-size: cover;
+    z-index: 1000;
+    .btn-primary{
+      border-radius: 0;
+      background: #0CFFE3;
+      color: black;
+    }
+  }
+
+  .mobile-intro{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    .row{
+        min-height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        color: white;
+        max-width: 100vw;
+        width: 100vw;
+        margin: 0!important;
+    }
+
+    .option{
+      border: 2px solid #0CFFE3;
+      border-radius: 3px;
+      color: #0CFFE3;
+      background: rgba(0, 0, 0, 0.6);
+      transition: all 0.5s ease-in-out;
+      img{
+        width: 80%;
+      }
+      &:hover{
+        transform: scale(1.05);
+        background: rgba(1, 2, 65, 0.6);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .vimeo-video{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background:rgba(0, 0, 0, 0.8);
+    iframe{
+      width: 100%;
+      height: 100%;
+      @media only screen and (min-width: 768px){
+        height: 400px;
+      }
+    }
+
+  }
+
+  .nyokabi-mobile, .arafa-mobile{
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    .row{
+      margin: 0!important;
+        min-height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        color: white;
+        max-width: 100vw;
+        width: 100vw;
+    }
+  }

@@ -1,0 +1,82 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url("assets/background.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#overlay {
+  padding: 120px 20px;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 1000;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#overlay .row {
+  min-height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: white;
+}
+#overlay .row p {
+  font-size: 1em;
+}
+#overlay hr {
+  border-bottom: solid white 1px;
+}
+
+button, .btn {
+  border-radius: 0;
+}
+
+.graf {
+  font-family: "Megrim", cursive;
+}
+
+#main {
+  width: 100vw;
+  color: white;
+}
+
+.spacer {
+  height: 5vh;
+}
+
+.portrait {
+  width: 100%;
+}
+
+.heading-1 {
+  background: url("assets/heading-1.png") center center no-repeat;
+  background-size: fill;
+  padding: 100px 50px;
+}
+@media only screen and (min-width: 768px) {
+  .heading-1 {
+    background-size: contain;
+    padding: 150px 100px;
+  }
+}
+
+.button-1 {
+  background: url("assets/button-1.png") center center no-repeat;
+  background-size: contain;
+  padding: 100px 50px;
+  transition: all 1s;
+}
+.button-1:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.divider {
+  width: 100%;
+  height: 10vh;
+}
+
+/*# sourceMappingURL=style.css.map */

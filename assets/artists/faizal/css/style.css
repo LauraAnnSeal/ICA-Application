@@ -1,0 +1,69 @@
+body
+{
+    background-color: #000000;
+    overflow-x: hidden; 
+    width: 100vw;
+}
+
+#overlay {
+    position: fixed;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url('../assets/background.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 1500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 100px;
+  }
+  #overlay .row {
+    margin-top: 300px;
+    margin-bottom: 100px;
+  }
+  @media only screen and (min-width: 768px) 
+  {
+    #overlay .row {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  #switchControl
+  {
+    width: 100vw;
+    height: 100vh;
+    z-index: 6;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+  }
+
+  #video1
+  {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+  }
+
+  #video2
+  {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+  }
+
+  #title
+  {
+    text-align: center;
+    position: absolute;
+    top: 45vh;
+     width: 100vw;
+    font-size: 50px;
+    color: rgb(255, 174, 0);
+    z-index: 8;
+    display: none;
+  }

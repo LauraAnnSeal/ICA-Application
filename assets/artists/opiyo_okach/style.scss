@@ -1,0 +1,224 @@
+html{
+    max-width: 100vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    }
+
+#overlay{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    overflow-y: scroll;
+    padding: 100px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+}
+#view{
+    color: white;
+}
+#editor {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+#controls {
+    background: #001414;
+    color: #a2fde8;
+    padding: 50px 20px;
+    overflow-y: scroll;
+    max-height: 100vh;
+    border: none;
+    .btn-link{
+        color: #a2fde8;
+    }
+    .btn-link-view{
+        padding: 0;
+        text-decoration: underline;
+    }
+    .hurrytimer-timer{
+        width: auto;
+        margin: 0;
+        text-align: left;
+        color: red!important;
+    }
+    .hurrytimer-timer-block{
+        display: inline-block;
+        padding-right: 0;
+    }
+    .hurrytimer-timer-digit{
+        font-weight: 700;
+        font-size: 1em;
+    }
+    .hurrytimer-timer-label{
+        font-weight: 200;
+        padding: 0 5px;
+        font-style: italic;
+    }
+    
+}
+#c {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: black;
+}
+.gutter {
+    background-color: lighten(#001414, 10%);
+}
+.gutter.gutter-horizontal {
+    width: 10px;
+    cursor: ew-resize;
+    background: lighten(#001414, 10%);
+}
+.labels{
+    position: absolute;  /* let us position ourself inside the container */
+    left: 0;             /* make our position the top left of the container */
+    top: 0;
+    button{
+        cursor: pointer;
+        left: 0;
+        top: 0;
+    }
+}
+
+
+
+.popupWindow{
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -100;
+    width: 100vw;
+    min-height: 100vh;
+    opacity: 0;
+    transition: all 1s ease;
+    overflow-y: scroll;
+    padding: 30px;
+    @media only screen and (min-width: 700px){
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .hurrytimer-timer{
+        width: auto;
+        margin: 0;
+        text-align: left;
+        color: red!important;
+    }
+    .hurrytimer-timer-block{
+        display: inline-block;
+        padding-right: 0;
+    }
+    .hurrytimer-timer-digit{
+        font-weight: 700;
+        font-size: 1.5em;
+    }
+    .hurrytimer-timer-label{
+        font-weight: 200;
+        padding: 0 5px;
+        font-style: italic;
+    }
+
+    .container{
+        background: rgba(0, 20, 20, 0.8);
+        border: #a2fde8 1px solid;
+        border-radius: 5px;
+        padding: 20px;
+        margin-top: 50px;
+        @media only screen and (max-width: 700px) {
+            margin-bottom: 200px;
+        }
+    }
+}
+.appear{
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: all 1s;
+    z-index: 1000;
+}
+.close-row{
+    display: flex;
+    justify-content: center;
+}
+
+
+.card{
+    background: none;
+    border: none;
+}
+
+.responsive-iframe {
+    @media only screen and (min-width: 700px){
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    
+    width: 100%;
+    height: 100%;
+    border: none;
+    min-height: 100px;
+}
+.responsive-small-iframe {
+width: 100%;
+height: auto;
+border: none;
+background: black;
+margin-top: 10px;
+}
+
+.opening{
+    color: #a2fde8;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.section{
+   background: #001414;
+   color: white;
+   border: #a2fde8 2px solid;
+   padding: 20px;
+   border-radius: 5px;
+   margin-bottom: 50px; 
+
+   .hurrytimer-timer{
+    width: auto;
+    margin-top: 20px;
+    text-align: left;
+    color: red!important;
+}
+.hurrytimer-timer-block{
+    display: inline-block;
+    padding-right: 0;
+}
+.hurrytimer-timer-digit{
+    font-weight: 700;
+    font-size: 2em;
+}
+.hurrytimer-timer-label{
+    font-weight: 200;
+    padding: 0 5px;
+    font-style: italic;
+}
+}
+  
+
+
+
+

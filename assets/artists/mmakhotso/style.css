@@ -1,0 +1,150 @@
+html {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#overlay {
+  font-family: "Courier Prime", monospace !important;
+  color: #455178 !important;
+  padding: 120px 20px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+#overlay .row {
+  min-height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#overlay p {
+  font-size: 1.2em;
+}
+#overlay .btn-primary {
+  background: #fac8d1;
+  border: 1px solid #fac8d1;
+  color: black;
+  font-weight: bolder;
+}
+#overlay .btn-primary:hover, #overlay .btn-primary:focus, #overlay .btn-primary:active {
+  background: #f699aa;
+  border: #f699aa 1px solid;
+}
+
+#three-js-container {
+  z-index: -1;
+  display: none;
+}
+#three-js-container canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+#three-js-container .buttons {
+  z-index: 2;
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+#three-js-container .buttons button {
+  margin: 10px 5px;
+}
+@media only screen and (min-width: 768px) {
+  #three-js-container .buttons {
+    bottom: 0;
+    right: 0;
+  }
+}
+#three-js-container .btn-light {
+  background: #fcdb36;
+  border: 1px solid #fcdb36;
+}
+#three-js-container .btn-light:hover, #three-js-container .btn-light:active, #three-js-container .btn-light:focus {
+  background: #c9a803;
+  border: #c9a803 1px solid;
+}
+
+#loading {
+  font-family: "Courier Prime", monospace !important;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+#loading .progress {
+  border: 1px solid white;
+  width: 50vw;
+  background: black;
+  padding: 2px;
+  height: auto;
+  margin: auto;
+}
+
+#loading .progressbar {
+  background: #fac8d1;
+  height: 1em;
+  transform-origin: top left;
+  width: 0%;
+}
+
+.popup-window {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.popup-window #btn-close {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  background: #fcdb36;
+  border: 1px solid #fcdb36;
+}
+.popup-window #btn-close:hover, .popup-window #btn-close:active, .popup-window #btn-close:focus {
+  background: #c9a803;
+  border: #c9a803 1px solid;
+}
+.popup-window canvas {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+.popup-window iframe {
+  width: 90vw;
+  height: 90vh;
+  margin-left: 5vw;
+  margin-top: 70px;
+  border: none;
+  border-radius: 5px;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/*# sourceMappingURL=style.css.map */

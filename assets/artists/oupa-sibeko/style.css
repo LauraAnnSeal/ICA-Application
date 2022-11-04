@@ -1,0 +1,134 @@
+.row {
+  width: 100%;
+}
+
+iframe.intro-video {
+  position: absolute;
+  background: black;
+}
+@media only screen and (orientation: landscape) {
+  iframe.intro-video {
+    height: 120vh;
+    width: 100vw;
+  }
+}
+@media only screen and (orientation: portrait) {
+  iframe.intro-video {
+    height: 100vh;
+    width: 500vw;
+  }
+}
+
+.iframe-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro {
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  overflow-y: scroll !important;
+}
+.intro .row {
+  padding: 100px 25px 100px 25px;
+  min-height: 100%;
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.intro h1 {
+  text-transform: none;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+.intro h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.intro .btn-light {
+  border: 4px solid white;
+  font-size: 2.5em;
+  padding: 6px 20px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.light-black {
+  max-height: 90vh;
+  margin-top: 5vh;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.light-black::-webkit-scrollbar {
+  width: 1px;
+}
+.light-black::-webkit-scrollbar-track {
+  background: black;
+}
+.light-black::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.light-black::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.light-black p {
+  font-size: 1.5em;
+}
+.light-black i {
+  font-size: 30px;
+  margin: 0 10px;
+}
+.light-black .btn-light {
+  border: 4px solid white;
+  font-size: 1em;
+  padding: 6px 20px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.smooth-fade {
+  transition: opacity 1s;
+  opacity: 1;
+}
+
+.fade-out {
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.video-360 {
+  background: black;
+}
+
+/*# sourceMappingURL=style.css.map */

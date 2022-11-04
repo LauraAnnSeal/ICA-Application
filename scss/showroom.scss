@@ -1,0 +1,195 @@
+@import 'z-index';
+
+// showroom
+#appature {
+    z-index: $layer1;
+    @include fullscreen-fixed;
+    @include flex-center;
+    svg{
+        width: 100vw;
+        margin: auto;
+        @include mQ ($lg){
+            width: 40vw;
+        }
+    }
+}
+#white-hole{
+    z-index: $layer3;
+    @include fullscreen-fixed;
+    @include flex-center;
+}
+.zoomOut{
+    animation: zoomOut 1.5s forwards ease-in-out;
+}
+.straight-zoom{
+    animation: straightZoom 1s forwards ease-in-out;
+}
+
+#enter-btn{
+    z-index: $front;
+    @include fullscreen-fixed;
+    @include flex-center;
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
+
+#background{
+    z-index: $back;
+    @include fullscreen-fixed;
+    @include flex-center;
+    overflow: hidden;
+    z-index: -1;
+    background: black;
+    padding: 0;
+    svg{
+        height: 120vh;
+        position: absolute;
+        top: -10vh;
+        min-width: 110vw;
+    }
+}
+
+button.btn-enter {
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid $orange;
+    transition: background scale box-shadow 0.5s;
+    transform: scale(1);
+    &:hover{
+        background: lighten($orange, 15%);
+        box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+        transform: scale(1.05);
+        color: white;
+    }
+}
+
+
+@keyframes zoomOut {
+    from {
+        -webkit-transform: rotate(0deg) translateZ(0) scale(1.0, 1.0);
+        -ms-transform: rotate(0deg) scale (0);
+        -webkit-backface-visibility: hidden;
+        transform: rotate(0deg) scale (0);
+        opacity: 1;
+    }
+    to{
+        -webkit-transform: rotate(200deg) translateZ(0) scale(20.0, 15.0);
+        -webkit-backface-visibility: hidden;
+        -ms-transform: rotate(200deg) scale (15);
+        transform:  rotate(200deg) scale (15);
+        opacity: 0;
+    }
+}
+
+@keyframes straightZoom{
+    from{
+        -webkit-transform: scale(0);
+        transform: scale (0);
+    }
+    to{
+        -webkit-transform: scale(15);
+        transform: scale (15);
+    }
+}
+
+.viewport{
+    z-index: $front;
+}
+
+.element{
+    min-height: 100vh;
+    position: absolute;
+    display: block;
+    margin: auto;
+    @include flex-center;
+    padding: 50px;
+}
+
+.theme{
+    width: 120vw;
+    left: -10vw;
+    color: white;
+    transform-style: preserve-3d;
+    @include mQ ($md){
+        width: 100vw;
+        left: 0;
+    }
+    h1{
+        font-size: 3em;
+        font-weight: 900;
+        text-transform: uppercase;
+        @include mQ ($md){
+            font-size: 4em;
+        }
+    }
+    h2{
+        font-weight: 300;
+    }
+
+}
+.artist{
+    width: 120vw;
+    left: -10vw;
+    color: white;
+    padding: 50px;
+    @include mQ ($xl, landscape){
+        width: 60vw;
+        padding: 150px;
+
+        &:nth-child(2n) {
+            left: 0;
+        }
+
+        &:nth-child(2n + 1) {
+            right: 0;
+        }
+    }
+
+    h1{
+        font-weight: 400;
+        font-size: 3em;
+        margin-bottom: 50px;
+    }
+    h2{
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.5em;
+    }
+    
+}
+
+
+.playing1, .history, .afrofuturity{
+    background: rgb(251,140,0);
+    background: linear-gradient(0deg, rgba(251,140,0,0.8) 0%, rgba(183,28,28,0.8) 100%);
+}
+.playing2, .cultural, .last{
+    background: rgb(67,160,71);
+    background: linear-gradient(0deg, rgba(67,160,71,0.8) 0%, rgba(38,198,208,0.8) 100%);
+}
+.displacement, .intimacy{
+    background: rgb(216,27,96);
+    background: linear-gradient(0deg, rgba(216,27,96,0.8) 0%, rgba(156,39,176,0.8) 100%);
+}
+.inequalities, .queer{
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,0.8) 0%, rgba(9,9,121,0.8) 35%, rgba(0,212,255,0.8) 100%);
+}
+.black-masculinities, .urbanity{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.630987429151348) 100%);
+}
+
+.instructions{
+    position: fixed;
+    bottom: 0;
+    .content{
+        background: $orange;
+        color: white;
+        border-radius: 10px 10px 0 0;
+        padding: 10px;
+    }
+}

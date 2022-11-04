@@ -1,0 +1,19 @@
+
+// breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin mQ ($arg...) {
+    @if length($arg) == 1{
+        @media only screen and (min-width: nth($arg, 1)){
+            @content;
+        }
+    }
+    @if length($arg) == 2{
+        @media only screen and (min-width: nth($arg, 1)) and (orientation: nth($arg, 2)){
+            @content;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+html, body
+{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: #2A2A2A;
+}
+
+#overlay 
+{
+  position: fixed;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 1500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+#overlay .row {
+  margin-bottom: 100px;
+}
+
+.installation 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    z-index: 0;
+    position: relative;
+    opacity: 0;
+  }
+
+  #tileOne
+  {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    height: 50vh;
+    z-index: 5;
+    position: absolute;
+    left: 25vw;
+    opacity: 1;
+    transition: opacity 1s; 
+  }
+
+  #tileOne.fade
+  {
+    opacity: 0;
+  }
+
+  #tileOne.fadeIn
+  {
+    opacity: 1;
+  }
+  
+  #tileTwo
+  {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 50vw;
+    height: 50vh;
+    z-index: 5;
+    position: absolute;
+    left: 25vw;
+    top: 50vh;
+    opacity: 1;
+    transition: opacity 1s; 
+  }
+
+  #tileTwo.fade
+  {
+    opacity: 0;
+  }
+
+  #tileTwo.fadeIn
+  {
+    opacity: 1;
+  }
+
+  .tiles:hover
+  {
+    cursor: pointer;
+  }
+
+  #gifTwo
+  {
+    height: 100vh; 
+    width: auto;
+    position: absolute;
+    left: 33vw;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 4s;
+  }
+
+  #gifTwo.fadeIn
+  {
+    opacity: 0.7;
+  }
+
+  #gifOne
+  {
+    height: 100vh; 
+    width: auto;
+    position: absolute;
+    left: 33vw;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 4s;
+  }
+
+  #gifOne.fadeIn
+  {
+    opacity: 0.7;
+  }
+
+  #video1
+  {
+    width: 100vw; 
+    height: 100vh;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 5s linear 4s;
+  }
+
+  #video1.fadeIn
+  {
+    opacity: 0.8;
+    z-index: 6;
+  }
+
+  #video2
+  {
+    width: 100vw; 
+    height: 100vh;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 5s linear 4s;
+  }
+
+  #video2.fadeIn
+  {
+    opacity: 0.6;
+    z-index: 6;
+  }
+
+  @media (min-width: 200px) and (max-width: 1024px) 
+  {
+    #tileOne
+    {
+      width: 100vw;
+      left: 0vw;
+    }
+    #tileTwo
+    {
+      width: 100vw;
+      left: 0vw;
+    }
+    #gifOne
+    {
+      width: auto;
+      height: 100vh;
+      left: 0;
+    }
+    #gifTwo
+    {
+      width: auto;
+      height: 100vh;
+      left: 0;
+    }
+  }

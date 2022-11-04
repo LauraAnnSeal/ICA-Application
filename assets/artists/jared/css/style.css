@@ -1,0 +1,191 @@
+body
+{
+    background-color: black;
+}
+
+#overlay 
+{
+    position: fixed;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: url('../assets/images/background.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 1500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    padding-top: 100px;
+    font-family: 'Cinzel', serif;
+}
+#overlay .row 
+{
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 768px) 
+{
+    #overlay .row 
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+#mapid 
+{ 
+    height: 100vh; 
+    width: 100vw;
+}
+
+@keyframes fade 
+{ 
+    from { opacity: 0.3; } 
+}
+
+.blinking 
+{
+    animation: fade 0.5s infinite alternate;
+}
+
+#contentOverlay 
+{
+    position: absolute;
+    display: none;
+    width: 40vw;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    background-image: url("../assets/images/newspaper-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 9999;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  #overlayText
+  {
+    position: relative;
+    color: black;
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+  }
+
+  #overlayText .container-fluid{
+    width: 100%!important;
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  #contentTitle
+  {
+    color: black;
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 300%;
+  }
+
+  #contentText
+  {
+    color: black;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 20;
+    width: 100%;
+  }
+
+  .travel
+  {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+  }
+
+  iframe.videos
+  {
+      width: 30vw;
+      height: 17vw;
+      margin-top: 10vh;
+  }
+
+  #more 
+  {
+     display: none;
+  }
+
+  .players
+  {
+      position: relative;
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+
+  #myBtn
+  {
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .error 
+  {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 1200;
+    padding: 0 50px;
+  }
+
+  @media only screen and (orientation: portrait) 
+  {
+    .error 
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @media only screen and (orientation: landscape) 
+  {
+    .error 
+    {
+      display: none;
+    }
+  }
+
+@media only screen and (max-width: 850px) {
+    audio
+    {
+      width: 100px;
+    }
+
+    #contentTitle
+    {
+        font-size: 20px;
+    }
+
+    .videos
+    {
+        width: 100%;
+        height: auto;
+        margin-top: 10vh;
+    }
+    
+    #myBtn 
+    {
+        padding: 5px 28px;
+    }
+  }
+  
